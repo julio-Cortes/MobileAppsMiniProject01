@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Budget_App</string>
+    <string name="salute">Hola, Nombre de usuario</string>
+    <string name = "total_balance">Balance total\n$700.000</string>
+    <string name = "saved">Ahorrado \n$700.000</string>
+    <string name = "all_spends">Todos</string>
+    <string name = "spends">Gastos</string>
+    <string name = "income">Ingresos</string>
+    <string name = "plus_one">+1</string>
+    <string name = "plus_five">+5</string>
+</resources>
