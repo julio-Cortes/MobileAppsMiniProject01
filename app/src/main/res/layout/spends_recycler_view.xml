@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <GridLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/spend_recycler_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:id="@+id/category_text_view"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@color/light_blue"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:layout_marginRight="5dp"
+            android:layout_columnWeight="2"
+
+            tools:text="Supermercado"
+            >
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tota_amout_view"
+            android:layout_columnWeight="1.5"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            tools:text="150">
+
+        </TextView>
+
+
+
+    </GridLayout>
+</android.support.constraint.ConstraintLayout>

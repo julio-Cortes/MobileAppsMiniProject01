@@ -71,6 +71,7 @@
         </LinearLayout>
         <GridLayout android:layout_width = "match_parent"
                     android:layout_height = "wrap_content"
+                    android:id="@+id/grid_layout"
                     app:layout_constraintTop_toBottomOf="@+id/top_buttons_layout"
                     app:layout_constraintStart_toStartOf = "parent"
                     android:columnCount="3"
@@ -146,6 +147,22 @@
             </Button>
 
         </GridLayout>
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/grid_layout">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/spend_recycler_view"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
         
         
     </android.support.constraint.ConstraintLayout>
