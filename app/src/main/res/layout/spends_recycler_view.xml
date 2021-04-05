@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <GridLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_marginTop="10dp"
         android:id="@+id/spend_recycler_linear"
         android:layout_width="match_parent"
@@ -19,35 +19,41 @@
 
         <TextView
             android:id="@+id/category_text_view"
-            android:layout_gravity="fill_horizontal"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:background="@color/light_blue"
             android:gravity="center"
             android:textColor="@color/black"
             android:textSize="25dp"
-            android:layout_marginRight="5dp"
-            android:layout_columnWeight="2"
 
-            tools:text="Supermercado"
-            >
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.6"
+            tools:text="Supermercado">
 
         </TextView>
 
         <TextView
             android:id="@+id/tota_amout_view"
-            android:layout_columnWeight="1.5"
-            android:layout_gravity="fill_horizontal"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:textColor="@color/black"
-            android:textSize="25dp"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintWidth_percent="0.4"
+            android:layout_marginLeft="15dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/category_text_view"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="150">
 
         </TextView>
 
 
 
-    </GridLayout>
+    </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>
