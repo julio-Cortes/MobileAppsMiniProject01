@@ -1,22 +1,25 @@
 package com.example.navtest
 
 
+import android.os.Parcelable
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import com.example.budget_app.OnClickListener
 import com.example.budget_app.R
+import kotlinx.android.parcel.Parcelize
 import java.text.NumberFormat
 import java.util.*
 import kotlin.random.Random
 
-
+@Parcelize
 data class Spend(
         val totalAmount: Long,
         val categoryTitle: String,
         val totalSpends: Int
-){
+): Parcelable {
     fun getAmountFormat(): String {
         val format = NumberFormat.getCurrencyInstance()
         format.maximumFractionDigits = 0
@@ -24,10 +27,10 @@ data class Spend(
         return format.format(this.totalAmount)
     }
 }
-
 class SpendRecyclerViewAdapter(): RecyclerView.Adapter<SpendRecyclerViewAdapter.SpendViewHolder>(){
 
     var data = mutableListOf<Spend>()
+    lateinit var onClickListener:OnClickListener
 
     inner class SpendViewHolder(private val view: View): RecyclerView.ViewHolder(view){
         fun bindView(item: Spend){
@@ -45,6 +48,9 @@ class SpendRecyclerViewAdapter(): RecyclerView.Adapter<SpendRecyclerViewAdapter.
     override fun onBindViewHolder(holder: SpendRecyclerViewAdapter.SpendViewHolder, position: Int) {
         val item = data[position]
         holder.bindView(item)
+        holder.itemView.setOnClickListener {
+            onClickListener.onClickItem(item)
+        }
     }
 
     override fun getItemCount(): Int {

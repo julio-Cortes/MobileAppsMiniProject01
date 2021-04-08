@@ -20,7 +20,7 @@
         <TextView
             android:id="@+id/category_text_view"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:background="@color/light_blue"
             android:gravity="center"
             android:textColor="@color/black"
@@ -38,7 +38,7 @@
         <TextView
             android:id="@+id/tota_amout_view"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:gravity="center"
             android:textColor="@color/black"
             android:textSize="15dp"
@@ -49,6 +49,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/category_text_view"
             app:layout_constraintTop_toTopOf="parent"
+
             tools:text="150">
 
         </TextView>
