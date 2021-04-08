@@ -30,7 +30,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.6"
+            app:layout_constraintWidth_percent="0.66"
             tools:text="Supermercado">
 
         </TextView>
@@ -43,7 +43,7 @@
             android:textColor="@color/black"
             android:textSize="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintWidth_percent="0.4"
+            app:layout_constraintWidth_percent="0.33"
             android:layout_marginLeft="15dp"
 
             app:layout_constraintEnd_toEndOf="parent"
